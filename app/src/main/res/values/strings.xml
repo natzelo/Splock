@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">Splock</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="game_name1">Rock Paper Scissor</string>
+    <string name="subtitle_ofGame">Settle a bet or  try out your luck.</string>
+    <string name="play">PLAY</string>
+    <string name="app_logo">App Logo</string>
+    <string name="rounds_prompt">Rounds</string>
+    <string name="game_name2">Lizard Spock </string>
+    <string name="choose_prompt">Take your pick</string>
+    <string name="stone">Stone</string>
+    <string name="paper">Paper</string>
+    <string name="scissor_text">Scissor</string>
+    <string name="Lizard">Lizard </string>
+    <string name="spock_text">Spock</string>
+    <string name="info_win">You Won!</string>
+    <string name="next_round">Next Round</string>
+    <string name="info_lost">You Lost</string>
+    <string name="play_again">Play Again</string>
+    <string name="info_tied">Game Tied !</string>
+
+</resources>

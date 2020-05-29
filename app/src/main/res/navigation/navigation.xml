@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/titleFragment">
+
+    <fragment
+        android:id="@+id/titleFragment"
+        android:name="com.example.andriod.splock.screens.title.TitleFragment"
+        android:label="fragment_title"
+        tools:layout="@layout/fragment_title" >
+        <action
+            android:id="@+id/action_titleFragment_to_gameFragment"
+            app:destination="@id/gameFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/gameFragment"
+        android:name="com.example.andriod.splock.screens.game.GameFragment"
+        android:label="fragment_game"
+        tools:layout="@layout/fragment_game" >
+        <action
+            android:id="@+id/action_gameFragment_to_gameWonFragment"
+            app:destination="@id/gameWonFragment" />
+        <action
+            android:id="@+id/action_gameFragment_to_gameLostFragment"
+            app:destination="@id/gameLostFragment" />
+        <action
+            android:id="@+id/action_gameFragment_to_gameTiedFragment"
+            app:destination="@id/gameTiedFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/gameWonFragment"
+        android:name="com.example.andriod.splock.screens.won.GameWonFragment"
+        android:label="fragment_game_won"
+        tools:layout="@layout/fragment_game_won" />
+    <fragment
+        android:id="@+id/gameLostFragment"
+        android:name="com.example.andriod.splock.screens.lost.GameLostFragment"
+        android:label="fragment_game_lost"
+        tools:layout="@layout/fragment_game_lost" />
+    <fragment
+        android:id="@+id/gameTiedFragment"
+        android:name="com.example.andriod.splock.screens.tied.GameTiedFragment"
+        android:label="fragment_game_tied"
+        tools:layout="@layout/fragment_game_tied" />
+</navigation>
