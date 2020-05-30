@@ -33,7 +33,7 @@ class GameFragment : Fragment() {
 
         viewModel.eventGameFinish.observe(viewLifecycleOwner, Observer { result ->
             if(result == 1) {
-                findNavController().navigate(GameFragmentDirections.actionGameFragmentToGameWonFragment())
+                findNavController().navigate(GameFragmentDirections.actionGameFragmentToGameWonFragment(viewModel.computer))
             }
             else if(result == 0) {
                 findNavController().navigate(GameFragmentDirections.actionGameFragmentToGameLostFragment())

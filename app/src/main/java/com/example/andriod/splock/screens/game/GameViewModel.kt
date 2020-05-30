@@ -10,7 +10,7 @@ import com.example.andriod.splock.R
 class GameViewModel : ViewModel() {
     private val elements = arrayOf("Stone", "Paper", "Scissor", "Lizard", "Spock")
     private var user : String = ""
-    private var computer : String = ""
+     var computer : String = ""
 
     // Event which triggers the end of the game
     private val _eventGameFinish = MutableLiveData<Int>()

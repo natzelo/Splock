@@ -20,5 +20,6 @@
     <string name="info_lost">You Lost</string>
     <string name="play_again">Play Again</string>
     <string name="info_tied">Game Tied !</string>
+    <string name="device_picked">Your device picked :</string>
 
 </resources>

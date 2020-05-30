@@ -31,6 +31,11 @@
             app:destination="@id/gameLostFragment"
             app:enterAnim="@anim/slide_in_right"
             app:exitAnim="@anim/slide_out_left" />
+        <action
+            android:id="@+id/action_gameFragment_to_gameTiedFragment"
+            app:destination="@id/gameTiedFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left" />
     </fragment>
     <fragment
         android:id="@+id/gameWonFragment"
@@ -42,6 +47,9 @@
             app:destination="@id/gameFragment"
             app:enterAnim="@anim/slide_in_right"
             app:exitAnim="@anim/slide_out_left" />
+        <argument
+            android:name="argPcChoiceWon"
+            app:argType="string" />
     </fragment>
     <fragment
         android:id="@+id/gameLostFragment"

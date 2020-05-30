@@ -23,7 +23,7 @@ class GameWonFragment : Fragment() {
 
         binding = DataBindingUtil.inflate(inflater, R.layout.fragment_game_won, container, false)
         // Inflate the layout for this fragment
-
+        binding.resultWon.text = GameWonFragmentArgs.fromBundle(arguments!!).argPcChoiceWon
         binding.playAgainButton.setOnClickListener {
             findNavController().navigate(GameWonFragmentDirections.actionGameWonFragmentToGameFragment())
         }
