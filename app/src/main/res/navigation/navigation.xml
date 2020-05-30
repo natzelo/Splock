@@ -33,15 +33,27 @@
         android:id="@+id/gameWonFragment"
         android:name="com.example.andriod.splock.screens.won.GameWonFragment"
         android:label="fragment_game_won"
-        tools:layout="@layout/fragment_game_won" />
+        tools:layout="@layout/fragment_game_won" >
+        <action
+            android:id="@+id/action_gameWonFragment_to_gameFragment"
+            app:destination="@id/gameFragment" />
+    </fragment>
     <fragment
         android:id="@+id/gameLostFragment"
         android:name="com.example.andriod.splock.screens.lost.GameLostFragment"
         android:label="fragment_game_lost"
-        tools:layout="@layout/fragment_game_lost" />
+        tools:layout="@layout/fragment_game_lost" >
+        <action
+            android:id="@+id/action_gameLostFragment_to_gameFragment"
+            app:destination="@id/gameFragment" />
+    </fragment>
     <fragment
         android:id="@+id/gameTiedFragment"
         android:name="com.example.andriod.splock.screens.tied.GameTiedFragment"
         android:label="fragment_game_tied"
-        tools:layout="@layout/fragment_game_tied" />
+        tools:layout="@layout/fragment_game_tied" >
+        <action
+            android:id="@+id/action_gameTiedFragment_to_gameFragment"
+            app:destination="@id/gameFragment" />
+    </fragment>
 </navigation>
