@@ -61,6 +61,9 @@
             app:destination="@id/gameFragment"
             app:enterAnim="@anim/slide_in_right"
             app:exitAnim="@anim/slide_out_left" />
+        <argument
+            android:name="argPcChoiceLost"
+            app:argType="string" />
     </fragment>
     <fragment
         android:id="@+id/gameTiedFragment"

@@ -22,7 +22,7 @@ class GameLostFragment : Fragment() {
         savedInstanceState: Bundle?): View? {
         // Inflate the layout for this fragment
         binding = DataBindingUtil.inflate(inflater, R.layout.fragment_game_lost, container, false)
-
+        binding.resultLost.text = GameLostFragmentArgs.fromBundle(arguments!!).argPcChoiceLost
         binding.playAgainButton.setOnClickListener {
             findNavController().navigate(GameLostFragmentDirections.actionGameLostFragmentToGameFragment())
         }
