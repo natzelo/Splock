@@ -4,7 +4,7 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="game_name1">Rock Paper Scissor</string>
-    <string name="subtitle_ofGame">Settle a bet or  try out your luck.</string>
+    <string name="subtitle_ofGame"> Settle your bets with this classic Sheldon Cooper way </string>
     <string name="play">PLAY</string>
     <string name="app_logo">App Logo</string>
     <string name="rounds_prompt">Rounds</string>
@@ -21,5 +21,29 @@
     <string name="play_again">Play Again</string>
     <string name="info_tied">Game Tied !</string>
     <string name="device_picked">Your device picked :</string>
-
+    <string name="pick_prompt">Take your pick</string>
+    <string name="game_finished">Game Finished</string>
+    <string name="about_game">
+        Rock, Paper, Scissors, Lizard, Spock is a game of chance that expands and builds upon the
+        classic Rock, Paper, Scissors game. Popularized by <b>The Big Bang Theory</b> character Sheldon Cooper
+        (played by Jim Parsons), the game first used to settle a debate between Sheldon and Raj about what to watch on TV.
+        \n\n
+        \nThe game was created by Sam Kass with Karen Bryla.
+        \n \n
+        \n<b>Rules of the game</b>
+        \n
+        \nScissors cuts Paper
+        \nPaper covers Rock
+        \nRock crushes Lizard
+        \nLizard poisons Spock
+        \nSpock smashes Scissors
+        \nScissors decapitates Lizard
+        \nLizard eats Paper
+        \nPaper disproves Spock
+        \nSpock vaporizes Rock
+        \n(and as it always has) Rock crushes Scissors
+    </string>
+    <string name="hail">Live Long and Prosper!</string>
+    <string name="about_the_game">About the game</string>
+    <string name="about_for_options">About</string>
 </resources>

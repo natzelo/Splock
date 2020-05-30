@@ -76,20 +76,6 @@
             android:onClick="@{(view) -> gameViewModel.choicemade(view)}"/>
 
         <TextView
-            android:id="@+id/choose_prompt"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:text="@string/choose_prompt"
-            android:textColor="@android:color/black"
-            android:textSize="18sp"
-            app:layout_constraintBottom_toTopOf="@+id/paper_image"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            />
-
-        <TextView
             android:id="@+id/paper_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
