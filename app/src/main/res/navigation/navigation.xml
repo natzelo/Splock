@@ -75,5 +75,8 @@
             app:destination="@id/gameFragment"
             app:enterAnim="@anim/slide_in_right"
             app:exitAnim="@anim/slide_out_left" />
+        <argument
+            android:name="argPcChoiceTied"
+            app:argType="string" />
     </fragment>
 </navigation>

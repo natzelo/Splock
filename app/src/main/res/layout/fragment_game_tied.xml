@@ -2,45 +2,72 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
-<androidx.constraintlayout.widget.ConstraintLayout
-    android:id="@+id/frameLayout4"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".screens.tied.GameTiedFragment">
 
-    <ImageView
-        android:id="@+id/image_tied"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@drawable/ic_round_tied"
-        app:layout_constraintBottom_toTopOf="@+id/info_tied"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_chainStyle="packed" />
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/frameLayout4"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".screens.tied.GameTiedFragment">
 
-    <TextView
-        android:id="@+id/info_tied"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/info_tied"
-        android:textColor="@android:color/black"
-        android:textSize="24sp"
-        app:layout_constraintBottom_toTopOf="@+id/play_again_button"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/image_tied" />
+        <ImageView
+            android:id="@+id/image_tied"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_round_tied"
+            app:layout_constraintBottom_toTopOf="@+id/info_tied"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_chainStyle="packed" />
 
-    <Button
-        android:id="@+id/play_again_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="32dp"
-        android:background="@drawable/btn_rounded"
-        android:text="@string/play_again"
-        android:textColor="@color/primaryTextColor"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <TextView
+            android:id="@+id/info_tied"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/info_tied"
+            android:textColor="@android:color/black"
+            android:textSize="24sp"
+            app:layout_constraintBottom_toTopOf="@+id/play_again_button"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/image_tied" />
+
+        <Button
+            android:id="@+id/play_again_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="32dp"
+            android:background="@drawable/btn_rounded"
+            android:text="@string/play_again"
+            android:textColor="@color/primaryTextColor"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/device_picked_text_tied"
+            style="@style/simple_heading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/device_picked"
+            app:layout_constraintBottom_toTopOf="@+id/image_tied"
+            app:layout_constraintEnd_toStartOf="@+id/result_tied"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/result_tied"
+            style="@style/simple_heading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="TextView"
+            app:layout_constraintBottom_toTopOf="@+id/image_tied"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/device_picked_text_tied"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

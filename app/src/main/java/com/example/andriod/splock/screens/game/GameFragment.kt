@@ -39,7 +39,7 @@ class GameFragment : Fragment() {
                 findNavController().navigate(GameFragmentDirections.actionGameFragmentToGameLostFragment(viewModel.computer))
             }
             else {
-                findNavController().navigate(GameFragmentDirections.actionGameFragmentToGameTiedFragment())
+                findNavController().navigate(GameFragmentDirections.actionGameFragmentToGameTiedFragment(viewModel.computer))
             }
         })
 
