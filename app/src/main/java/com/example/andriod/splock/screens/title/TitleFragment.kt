@@ -3,6 +3,8 @@ package com.example.andriod.splock.screens.title
 import android.os.Bundle
 import android.util.Log
 import android.view.*
+import android.view.animation.Animation
+import android.view.animation.AnimationUtils
 import androidx.fragment.app.Fragment
 import android.widget.AdapterView
 import android.widget.AdapterView.OnItemSelectedListener
@@ -53,6 +55,12 @@ class TitleFragment : Fragment() {
 
         }
 
+
+        /**Animation for play button**/
+        val play : Animation = AnimationUtils.loadAnimation(requireContext(), R.anim.play_button_move)
+        binding.playButton.startAnimation(play)
+
+
         //click listener for the play button
         binding.playButton.setOnClickListener {
             findNavController().navigate(TitleFragmentDirections.actionTitleFragmentToGameFragment())
@@ -61,6 +69,7 @@ class TitleFragment : Fragment() {
         return binding.root
     }
 
+    /** Menu Related code **/
     override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
         super.onCreateOptionsMenu(menu, inflater)
         inflater?.inflate(R.menu.options_menu, menu)
