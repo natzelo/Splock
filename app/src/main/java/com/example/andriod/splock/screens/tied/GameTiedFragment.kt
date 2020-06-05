@@ -22,7 +22,7 @@ class GameTiedFragment : Fragment() {
         savedInstanceState: Bundle?): View? {
         // Inflate the layout for this fragment
         binding = DataBindingUtil.inflate(inflater, R.layout.fragment_game_tied, container, false)
-        binding.resultTied.text = GameTiedFragmentArgs.fromBundle(arguments!!).argPcChoiceTied
+
         binding.playAgainButton.setOnClickListener {
             findNavController().navigate(GameTiedFragmentDirections.actionGameTiedFragmentToGameFragment())
         }

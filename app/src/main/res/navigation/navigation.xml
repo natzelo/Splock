@@ -42,6 +42,9 @@
             app:exitAnim="@anim/slide_out_left"
             app:popUpTo="@id/titleFragment"
             app:popUpToInclusive="false" />
+        <argument
+            android:name="rounds"
+            app:argType="integer" />
     </fragment>
     <fragment
         android:id="@+id/gameWonFragment"
@@ -50,12 +53,9 @@
         tools:layout="@layout/fragment_game_won">
         <action
             android:id="@+id/action_gameWonFragment_to_gameFragment"
-            app:destination="@id/gameFragment"
+            app:destination="@id/titleFragment"
             app:enterAnim="@anim/slide_in_right"
             app:exitAnim="@anim/slide_out_left" />
-        <argument
-            android:name="argPcChoiceWon"
-            app:argType="string" />
     </fragment>
     <fragment
         android:id="@+id/gameLostFragment"
@@ -64,12 +64,9 @@
         tools:layout="@layout/fragment_game_lost">
         <action
             android:id="@+id/action_gameLostFragment_to_gameFragment"
-            app:destination="@id/gameFragment"
+            app:destination="@id/titleFragment"
             app:enterAnim="@anim/slide_in_right"
             app:exitAnim="@anim/slide_out_left" />
-        <argument
-            android:name="argPcChoiceLost"
-            app:argType="string" />
     </fragment>
     <fragment
         android:id="@+id/gameTiedFragment"
@@ -78,12 +75,9 @@
         tools:layout="@layout/fragment_game_tied">
         <action
             android:id="@+id/action_gameTiedFragment_to_gameFragment"
-            app:destination="@id/gameFragment"
+            app:destination="@id/titleFragment"
             app:enterAnim="@anim/slide_in_right"
             app:exitAnim="@anim/slide_out_left" />
-        <argument
-            android:name="argPcChoiceTied"
-            app:argType="string" />
     </fragment>
     <fragment
         android:id="@+id/about"

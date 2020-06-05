@@ -19,6 +19,8 @@ class GameFragment : Fragment() {
 
     //declare data binding variable
     private lateinit var binding: FragmentGameBinding
+    //declare view model factory
+    private lateinit var  viewModelFactory : GameViewModelFactory
     //declare game view model
     private lateinit var viewModel: GameViewModel
 
@@ -29,18 +31,31 @@ class GameFragment : Fragment() {
         binding = DataBindingUtil.inflate(inflater, R.layout.fragment_game, container,false)
 
         // Initialize ViewModel
-        viewModel = ViewModelProviders.of(this).get(GameViewModel::class.java)
+        viewModelFactory = GameViewModelFactory(GameFragmentArgs.fromBundle(arguments!!).rounds)
+        viewModel = ViewModelProviders.of(this, viewModelFactory).get(GameViewModel::class.java)
 
         viewModel.eventGameFinish.observe(viewLifecycleOwner, Observer { result ->
             if(result == 1) {
-                findNavController().navigate(GameFragmentDirections.actionGameFragmentToGameWonFragment(viewModel.computer))
+                findNavController().navigate(GameFragmentDirections.actionGameFragmentToGameWonFragment())
             }
             else if(result == 0) {
-                findNavController().navigate(GameFragmentDirections.actionGameFragmentToGameLostFragment(viewModel.computer))
+                findNavController().navigate(GameFragmentDirections.actionGameFragmentToGameLostFragment())
             }
             else {
-                findNavController().navigate(GameFragmentDirections.actionGameFragmentToGameTiedFragment(viewModel.computer))
+                findNavController().navigate(GameFragmentDirections.actionGameFragmentToGameTiedFragment())
             }
+        })
+
+        viewModel.cround.observe(viewLifecycleOwner, Observer { updateRound ->
+            binding.cround.text = updateRound.toString()
+        })
+
+        viewModel.yourScore.observe(viewLifecycleOwner, Observer { newYourScore->
+            binding.yourScoreValue.text = newYourScore.toString()
+        })
+
+        viewModel.androidScore.observe(viewLifecycleOwner, Observer { newAndroidScore ->
+            binding.androidScoreValue.text = newAndroidScore.toString()
         })
 
         binding.gameViewModel = viewModel

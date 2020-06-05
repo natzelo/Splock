@@ -46,4 +46,6 @@
     <string name="hail">Live Long and Prosper!</string>
     <string name="about_the_game">About the game</string>
     <string name="about_for_options">About</string>
+    <string name="your_score">Your Score</string>
+    <string name="android_score">Android\'s Score</string>
 </resources>
