@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
@@ -57,7 +58,17 @@ class GameFragment : Fragment() {
         viewModel.androidScore.observe(viewLifecycleOwner, Observer { newAndroidScore ->
             binding.androidScoreValue.text = newAndroidScore.toString()
         })
-
+        viewModel.result.observe(viewLifecycleOwner, Observer { newResult ->
+            if (newResult == 1) {
+                Toast.makeText(requireContext(), "Android picked ${viewModel.computer}. Round Won!" ,  Toast.LENGTH_SHORT).show()
+            }
+            else if (newResult == 0) {
+                Toast.makeText(requireContext(), "Android picked ${viewModel.computer}. Round Lost :/", Toast.LENGTH_SHORT).show()
+            }
+            else {
+                Toast.makeText(requireContext(), "Woah! It's a tie!", Toast.LENGTH_SHORT).show()
+            }
+        })
         binding.gameViewModel = viewModel
         return binding.root
     }

@@ -73,7 +73,7 @@
             app:layout_constraintHorizontal_bias="0.517"
             app:layout_constraintStart_toEndOf="@+id/scissor_image"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.75" />
+            app:layout_constraintVertical_bias="0.65" />
 
         <TextView
             android:id="@+id/paper_text"
@@ -142,7 +142,7 @@
             android:id="@+id/cround"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="16dp"
+            android:layout_marginBottom="24dp"
             android:background="@drawable/circular_view"
             android:gravity="center"
             android:text="1"
@@ -150,59 +150,66 @@
             android:textSize="18sp"
             android:visibility="visible"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/spock_text" />
+            app:layout_constraintEnd_toStartOf="@+id/androidScoreValue"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/yourScoreValue" />
 
         <TextView
             android:id="@+id/your_score_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="32dp"
+            android:layout_marginBottom="8dp"
+            android:fontFamily="@font/montserrat"
             android:text="@string/your_score"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textSize="14sp"
             app:layout_constraintBottom_toTopOf="@+id/yourScoreValue"
-            app:layout_constraintEnd_toStartOf="@+id/android_score_text"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintHorizontal_chainStyle="spread_inside"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/spock_image" />
+            app:layout_constraintEnd_toEndOf="@+id/yourScoreValue"
+            app:layout_constraintStart_toStartOf="@+id/yourScoreValue" />
 
         <TextView
             android:id="@+id/yourScoreValue"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="32dp"
+            android:layout_marginBottom="24dp"
+            android:background="@drawable/score_circular_view"
+            android:gravity="center"
             android:text="0"
+            android:textAlignment="center"
+            android:textColor="@color/primaryTextColor"
+            android:textSize="18sp"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/androidScoreValue"
+            app:layout_constraintEnd_toStartOf="@+id/cround"
             app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintHorizontal_chainStyle="spread_inside"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/your_score_text" />
+            app:layout_constraintStart_toStartOf="parent" />
 
         <TextView
             android:id="@+id/android_score_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="32dp"
+            android:layout_marginBottom="8dp"
+            android:fontFamily="@font/montserrat"
             android:text="@string/android_score"
+            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+            android:textSize="14sp"
             app:layout_constraintBottom_toTopOf="@+id/androidScoreValue"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toEndOf="@+id/your_score_text"
-            app:layout_constraintTop_toBottomOf="@+id/spock_image" />
+            app:layout_constraintEnd_toEndOf="@+id/androidScoreValue"
+            app:layout_constraintStart_toStartOf="@+id/androidScoreValue" />
 
         <TextView
             android:id="@+id/androidScoreValue"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="32dp"
+            android:layout_marginBottom="24dp"
+            android:background="@drawable/score_circular_view"
+            android:gravity="center"
             android:text="0"
+            android:textColor="@color/primaryTextColor"
+            android:textSize="18sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toEndOf="@+id/yourScoreValue"
-            app:layout_constraintTop_toBottomOf="@+id/android_score_text" />
+            app:layout_constraintStart_toEndOf="@+id/cround" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

@@ -8,6 +8,7 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.example.andriod.splock.R
+import java.security.AccessController.getContext
 
 
 class GameViewModel(tRounds : Int) : ViewModel() {
@@ -33,6 +34,9 @@ class GameViewModel(tRounds : Int) : ViewModel() {
     val androidScore : LiveData<Int>
         get() = _androidScore
 
+    private  val _result = MutableLiveData<Int>()
+    val  result : LiveData<Int>
+        get() = _result
 
     fun choicemade(view : View)
     {
@@ -56,69 +60,73 @@ class GameViewModel(tRounds : Int) : ViewModel() {
         if(user == "Stone") {
             if(computer == "Lizard" || computer == "Scissor") {
                 _yourScore.value = _yourScore.value?.plus(2)
+                _result.value = 1
 
             }
             else if(computer == "Spock" || computer == "Paper") {
                 _androidScore.value = _androidScore.value?.plus(2)
-
+                _result.value = 0
             }
             else {
-
+                _result.value = 2
             }
             _cround.value = _cround.value?.plus(1)
         }
         else if (user == "Paper") {
             if (computer == "Spock" || computer == "Stone") {
                 _yourScore.value = _yourScore.value?.plus(2)
+                _result.value = 1
 
             }
             else if(computer == "Scissor" || computer == "Lizard") {
                 _androidScore.value = _androidScore.value?.plus(2)
-
+                _result.value = 0
             }
             else {
-
+                _result.value = 2
             }
             _cround.value = _cround.value?.plus(1)
         }
         else if (user == "Scissor") {
             if(computer == "Lizard" || computer == "Paper") {
                 _yourScore.value = _yourScore.value?.plus(2)
-
+                _result.value = 1
             }
             else if (computer == "Spock" || computer == "Stone") {
                 _androidScore.value = _androidScore.value?.plus(2)
-
+                _result.value = 0
             }
             else {
-
+                _result.value = 2
             }
             _cround.value = _cround.value?.plus(1)
         }
         else if (user == "Lizard") {
             if(computer == "Spock" || computer == "Paper") {
                 _yourScore.value = _yourScore.value?.plus(2)
+                _result.value = 1
 
             }
             else if (computer == "Stone" || computer == "Scissor") {
                 _androidScore.value = _androidScore.value?.plus(2)
-
+                _result.value = 0
             }
             else {
-
+                _result.value = 2
             }
             _cround.value = _cround.value?.plus(1)
         }
         else if (user == "Spock") {
             if(computer == "Scissor" || computer == "Stone") {
                 _yourScore.value = _yourScore.value?.plus(2)
+                _result.value = 1
             }
             else if(computer == "Lizard" || computer == "Paper") {
                 _androidScore.value = _androidScore.value?.plus(2)
-
+                _result.value = 0
             }
             else {
-
+                _result.value = 2
             }
             _cround.value = _cround.value?.plus(1)
 
